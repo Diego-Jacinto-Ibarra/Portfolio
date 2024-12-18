@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+
 import PythonIcon from "./assets/python-icon.svg?react";
 import DjangoIcon from "./assets/django-icon.svg?react";
 import FlaskIcon from "./assets/flask-icon.svg?react";
@@ -9,7 +10,10 @@ import GithubIcon from "./assets/github-mark.svg?react";
 import NginxIcon from "./assets/nginx-icon.svg?react";
 import LinuxIcon from "./assets/linux-icon.svg?react";
 
-export default function Component() {
+import { ProjectCard } from "./components/ProjectCard";
+
+export default function App() {
+    const [showScrollTop, setShowScrollTop] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
     const handleShowModal = () => {
@@ -21,75 +25,112 @@ export default function Component() {
         setShowModal(false);
     };
 
+    const projects = [
+        {
+            title: "Little Lemon",
+            description: "A modern restaurant website built with React",
+            image: "/littlelemon.png",
+            technologies: ["Python", "Django", "Bootstrap"],
+            demoUrl: "https://diegojacinto.com/littlelemon/",
+            githubUrl: "https://github.com/yourusername/project",
+        },
+        // ... more projects
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <div className="dark:bg-[#1a1a1a] bg-white min-h-screen">
-            <header className="bg-[#005b8f] py-6 px-4 md:px-8 shadow-md">
-                <div className="container mx-auto flex items-center justify-between">
-                    <div className="flex items-center">
-                        <CodeIcon className="h-8 w-8 text-white" />
-                        <h1 className="text-white font-bold text-2xl ml-2">
-                            Diego Jacinto - Backend Developer
+            <header className="bg-gradient-to-r from-[#003f6b] to-[#005b8f]">
+                <div className="container mx-auto px-4 py-16">
+                    <nav className="flex justify-between items-center mb-16">
+                        <div className="flex items-center space-x-2">
+                            <CodeIcon className="h-8 w-8 text-white animate-pulse" />
+                            <span className="text-white font-bold text-xl">
+                                DJ
+                            </span>
+                        </div>
+
+                        <div className="flex items-center space-x-6">
+                            <a
+                                href="https://github.com/Diego-Jacinto-Ibarra"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-gray-300 transition-colors"
+                            >
+                                <GithubIcon className="w-10 h-10" />
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-gray-300 transition-colors"
+                            >
+                                <svg
+                                    className="w-7 h-7"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </nav>
+
+                    <div className="text-center max-w-4xl mx-auto">
+                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                            Backend Developer
+                            <span className="block text-[#d0d0d0]">
+                                Especializado en Python
+                            </span>
                         </h1>
+
+                        <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                            Desarrollo soluciones robustas y escalables
+                            utilizando tecnologías modernas como Django, Flask y
+                            bases de datos SQL. Enfocado en crear aplicaciones
+                            de alto rendimiento y fáciles de mantener.
+                        </p>
+
+                        <div className="flex justify-center space-x-4">
+                            <a
+                                href="#projects"
+                                className="bg-white text-[#003f6b] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                            >
+                                Ver Proyectos
+                            </a>
+                            <a
+                                href="/CV.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors flex items-center gap-2"
+                            >
+                                <span>Ver CV</span>
+                                <svg
+                                    className="w-5 h-5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>
             <main>
-                <section className="bg-[#005b8f] py-20 px-4 md:px-8">
-                    <div className="container mx-auto grid grid-cols-1 gap-8 items-center">
-                        <div className="text-center">
-                            <p className="text-[#d0d0d0] text-xl mb-6">
-                                Hola, soy Diego Jacinto, desarrollador backend
-                                con experiencia en optimización de flujos de
-                                trabajo y creación de aplicaciones robustas y
-                                escalables.
-                            </p>
-                            <div className="space-y-4">
-                                <div className="flex justify-center items-center">
-                                    <svg
-                                        className="w-6 h-6 text-white mr-2"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 4.99-8-4.99V6h16zM4 18V8.489l7.386 4.615a1 1 0 0 0 1.228 0L20 8.489V18H4z"
-                                        />
-                                    </svg>
-                                    <a
-                                        href="mailto:diego.jacinto.ibarra@gmail.com"
-                                        className="text-white font-bold"
-                                    >
-                                        diego.jacinto.ibarra@gmail.com
-                                    </a>
-                                </div>
-                                <div className="flex justify-center items-center">
-                                    <svg
-                                        className="w-6 h-6 text-white mr-2"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.378-.028-3.152-1.92-3.152-1.92 0-2.215 1.5-2.215 3.048v5.604h-3v-10h2.88v1.367h.041c.401-.76 1.379-1.56 2.84-1.56 3.037 0 3.6 2 3.6 4.6v5.593z" />
-                                    </svg>
-                                    <a
-                                        href="https://www.linkedin.com/in/diego-jacinto-9718372b3/"
-                                        className="text-white font-bold hover:underline"
-                                    >
-                                        Mi LinkedIn
-                                    </a>
-                                </div>
-                                <div className="flex justify-center">
-                                    <a
-                                        href="/CV.pdf"
-                                        target="_blank"
-                                        className="bg-[white] text-black hover:bg-[#d0d0d0] hover:text-[#005b8f] transition-colors px-4 py-2 rounded-md font-bold"
-                                    >
-                                        Ver CV
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section className="bg-white dark:bg-[#1a1a1a] py-20 px-4 md:px-8">
                     <div className="container mx-auto">
                         <h2 className="text-[#005b8f] dark:text-white text-3xl font-bold mb-8 text-center">
@@ -119,6 +160,29 @@ export default function Component() {
                                         problemas de gestión documental en la
                                         Universidad de Guadalajara.
                                     </p>
+
+                                    <div className="border-t border-white/20 pt-4 mt-4">
+                                        <div className="flex flex-wrap gap-2">
+                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                                                Python
+                                            </span>
+                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                                                Django
+                                            </span>
+                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                                                PostgreSQL
+                                            </span>
+                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                                                Docker
+                                            </span>
+                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                                                Nginx
+                                            </span>
+                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
+                                                Linux
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -130,57 +194,75 @@ export default function Component() {
                                         <h4 className="text-white font-bold text-xl mb-2">
                                             Lenguajes y frameworks
                                         </h4>
-                                        <div className="flex items-center space-x-4">
-                                            <PythonIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Python
-                                            </span>
-                                            <DjangoIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Django
-                                            </span>
-                                            <FlaskIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Flask
-                                            </span>
+                                        <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
+                                            <div className="flex flex-col items-center">
+                                                <PythonIcon className="w-16 h-16 text-white skill-icon" />
+                                                <span className="text-white mt-2 font-medium">
+                                                    Python
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <DjangoIcon className="w-16 h-16 text-white skill-icon" />
+                                                <span className="text-white mt-2 font-medium">
+                                                    Django
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <FlaskIcon className="w-16 h-16 text-white skill-icon" />
+                                                <span className="text-white mt-2 font-medium">
+                                                    Flask
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
                                         <h4 className="text-white font-bold text-xl mb-2">
                                             Bases de datos
                                         </h4>
-                                        <div className="flex items-center space-x-4">
-                                            <MysqlIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                MySQL
-                                            </span>
-                                            <PostgresIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                PostgreSQL
-                                            </span>
+                                        <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
+                                            <div className="flex flex-col items-center">
+                                                <MysqlIcon className="w-12 h-12 text-white skill-icon" />
+                                                <span className="text-white">
+                                                    MySQL
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <PostgresIcon className="w-12 h-12 text-white skill-icon" />
+                                                <span className="text-white">
+                                                    PostgreSQL
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
                                         <h4 className="text-white font-bold text-xl mb-2">
                                             Otros
                                         </h4>
-                                        <div className="flex items-center space-x-4">
-                                            <DockerIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Docker
-                                            </span>
-                                            <GithubIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Git & Github
-                                            </span>
-                                            <NginxIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Nginx
-                                            </span>
-                                            <LinuxIcon className="w-12 h-12 text-white" />
-                                            <span className="text-white">
-                                                Linux
-                                            </span>
+                                        <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
+                                            <div className="flex flex-col items-center">
+                                                <DockerIcon className="w-12 h-12 text-white skill-icon" />
+                                                <span className="text-white">
+                                                    Docker
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <GithubIcon className="w-12 h-12 text-white skill-icon" />
+                                                <span className="text-white">
+                                                    Git
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <NginxIcon className="w-12 h-12 text-white skill-icon" />
+                                                <span className="text-white">
+                                                    Nginx
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <LinuxIcon className="w-12 h-12 text-white skill-icon" />
+                                                <span className="text-white">
+                                                    Linux
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,109 +275,41 @@ export default function Component() {
                         <h2 className="text-[#005b8f] dark:text-white text-3xl font-bold mb-8 text-center">
                             Proyectos
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="max-w-lg mx-auto">
-                                <a
-                                    href="https://diegojacinto.com/littlelemon/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <div className="w-full h-64 bg-gray-200 rounded-t-md overflow-hidden">
-                                        <img
-                                            src="/littlelemon.png"
-                                            alt="Proyecto 1"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                </a>
-                                <div className="p-4 bg-[#005b8f] dark:bg-[#3d3d3d]">
-                                    <h3 className="text-white text-xl font-bold mb-2">
-                                        Littlelemon
-                                    </h3>
-                                    <p className="text-[#d0d0d0] mb-4">
-                                        Proyecto realizado en la certificación{" "}
-                                        <a
-                                            href="https://www.credly.com/badges/04422cab-4e77-4cde-ae98-8468fad21201/linked_in_profile"
-                                            className="font-bold text-[#d0d0d0] hover:text-white"
-                                        >
-                                            Meta Back-End Developer Certificate
-                                        </a>
-                                    </p>
-                                    <a
-                                        href="#"
-                                        className="text-[#d0d0d0] hover:text-white transition-colors"
-                                        onClick={handleShowModal}
-                                    >
-                                        Ver más
-                                    </a>
-                                </div>
-                            </div>
+                        <div
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-8"
+                            id="projects"
+                        >
+                            {projects.map((project, index) => (
+                                <ProjectCard key={index} project={project} />
+                            ))}
                         </div>
                     </div>
                 </section>
             </main>
 
-            {showModal && (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-        <div className="bg-white dark:bg-[#1a1a1a] p-6 rounded-lg shadow-lg max-w-lg w-full">
-            <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold text-[#005b8f] dark:text-white">
-                    Little Lemon
-                </h2>
+            {showScrollTop && (
                 <button
-                    className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 text-5xl"
-                    onClick={handleCloseModal}
+                    onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                    className="fixed bottom-8 right-8 bg-[#005b8f] p-3 rounded-full shadow-lg hover:bg-[#003f6b] transition-colors z-50"
+                    aria-label="Scroll to top"
                 >
-                    &times;
+                    <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 10l7-7m0 0l7 7m-7-7v18"
+                        />
+                    </svg>
                 </button>
-            </div>
-            <p className="text-lg text-[#005b8f] dark:text-white mb-2">
-                Proyecto realizado en la certificación Meta Back-End Developer Certificate
-            </p>
-            <p className="text-lg text-[#005b8f] dark:text-white mb-4">
-                Aprendizajes:
-            </p>
-            <ul className="list-disc list-inside text-[#005b8f] dark:text-white mb-4">
-                <li className="mb-4">
-                    <strong>Python y Django:</strong> Programación en Python y desarrollo de aplicaciones web con el framework Django.
-                </li>
-                <li className="mb-4">
-                    <strong>Bases de datos:</strong> Conceptos de bases de datos relacionales, incluyendo consultas SQL y uso de bases de datos como PostgreSQL.
-                </li>
-                <li className="mb-4">
-                    <strong>APIs:</strong> Creación, gestión y buenas prácticas de APIs.
-                </li>
-                <li className="mb-4">
-                    <strong>Control de versiones y colaboración:</strong> Uso de Git y GitHub para versionar el código y colaborar en equipo.
-                </li>
-                <li className="mb-4">
-                    <strong>Pruebas y depuración:</strong> Técnicas de pruebas y debugging para asegurar que las aplicaciones funcionen correctamente.
-                </li>
-                <li className="mb-4">
-                    <strong>Entorno de producción:</strong> Conceptos sobre cómo implementar aplicaciones en un entorno de producción.
-                </li>
-            </ul>
-            <div className="flex justify-between">
-                <a
-                    href="https://github.com/Diego-Jacinto-Ibarra/Little-Lemon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#005b8f] text-white hover:bg-[#003f6b] transition-colors px-4 py-2 rounded-md font-bold"
-                >
-                    Ver en GitHub
-                </a>
-                <a
-                    href="https://diegojacinto.com/littlelemon/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#005b8f] text-white hover:bg-[#003f6b] transition-colors px-4 py-2 rounded-md font-bold"
-                >
-                    Ver Proyecto
-                </a>
-            </div>
-        </div>
-    </div>
-)}
+            )}
         </div>
     );
 }
