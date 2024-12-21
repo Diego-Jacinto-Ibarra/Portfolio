@@ -34,7 +34,7 @@ export default function App() {
             image: "/littlelemon.png",
             technologies: ["Python", "Django", "Bootstrap"],
             demoUrl: "https://diegojacinto.com/littlelemon/",
-            githubUrl: "https://github.com/yourusername/project",
+            githubUrl: "https://github.com/Diego-Jacinto-Ibarra/Little-Lemon",
         },
         // ... more projects
     ];
