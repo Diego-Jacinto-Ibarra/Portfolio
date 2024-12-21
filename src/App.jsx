@@ -30,9 +30,9 @@ export default function App() {
     const projects = [
         {
             title: "Little Lemon",
-            description: "A modern restaurant website built with React",
+            description: "Restaurant management website developed as part of the Meta Back-End Developer Professional Certificate.",
             image: "/littlelemon.png",
-            technologies: ["Python", "Django", "Bootstrap"],
+            technologies: ["Python", "Django", "PostgreSQL", "Nginx"],
             demoUrl: "https://diegojacinto.com/littlelemon/",
             githubUrl: "https://github.com/Diego-Jacinto-Ibarra/Little-Lemon",
         },
@@ -69,7 +69,7 @@ export default function App() {
                                 <GithubIcon className="w-10 h-10" />
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://www.linkedin.com/in/diego-jacinto-9718372b3/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-gray-300 transition-colors"
