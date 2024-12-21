@@ -9,6 +9,8 @@ import DockerIcon from "./assets/docker-icon.svg?react";
 import GithubIcon from "./assets/github-mark.svg?react";
 import NginxIcon from "./assets/nginx-icon.svg?react";
 import LinuxIcon from "./assets/linux-icon.svg?react";
+import SpringIcon from "./assets/spring-icon.svg?react";
+import JavaIcon from "./assets/java-icon.svg?react";
 
 import { ProjectCard } from "./components/ProjectCard";
 
@@ -86,9 +88,6 @@ export default function App() {
                     <div className="text-center max-w-4xl mx-auto">
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                             Backend Developer
-                            <span className="block text-[#d0d0d0]">
-                                Especializado en Python
-                            </span>
                         </h1>
 
                         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -211,6 +210,18 @@ export default function App() {
                                                 <FlaskIcon className="w-16 h-16 text-white skill-icon" />
                                                 <span className="text-white mt-2 font-medium">
                                                     Flask
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <SpringIcon className="w-16 h-16 text-white skill-icon" />
+                                                <span className="text-white mt-2 font-medium">
+                                                    Spring
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-col items-center">
+                                                <JavaIcon className="w-16 h-16 text-white skill-icon" />
+                                                <span className="text-white mt-2 font-medium">
+                                                    Java
                                                 </span>
                                             </div>
                                         </div>
