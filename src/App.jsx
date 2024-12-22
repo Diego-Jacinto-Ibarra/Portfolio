@@ -30,7 +30,8 @@ export default function App() {
     const projects = [
         {
             title: "Little Lemon",
-            description: "Restaurant management website developed as part of the Meta Back-End Developer Professional Certificate.",
+            description:
+                "Restaurant management website developed as part of the Meta Back-End Developer Professional Certificate.",
             image: "/littlelemon.png",
             technologies: ["Python", "Django", "PostgreSQL", "Nginx"],
             demoUrl: "https://diegojacinto.com/littlelemon/",
@@ -130,172 +131,185 @@ export default function App() {
                 </div>
             </header>
             <main>
-                <section className="bg-white dark:bg-[#1a1a1a] py-20 px-4 md:px-8">
-                    <div className="container mx-auto">
-                        <h2 className="text-[#005b8f] dark:text-white text-3xl font-bold mb-8 text-center">
-                            Sobre mí
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div>
-                                <h3 className="text-[#005b8f] dark:text-white text-2xl font-bold mb-4 text-center">
-                                    Experiencia
-                                </h3>
-                                <div className="bg-[#005b8f] dark:bg-[#3d3d3d] text-white p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-2xl font-bold mb-4">
-                                        Aplicación Web - Universidad de
-                                        Guadalajara
+                <article className="container mx-auto">
+                    <section
+                        aria-label="About Me"
+                        className="bg-white dark:bg-[#1a1a1a] py-20 px-4 md:px-8"
+                    >
+                        <div className="container mx-auto">
+                            <h2 className="text-[#005b8f] dark:text-white text-3xl font-bold mb-8 text-center">
+                                Sobre mí
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 className="text-[#005b8f] dark:text-white text-2xl font-bold mb-4 text-center">
+                                        Experiencia
                                     </h3>
-                                    <p className="text-lg mb-2">
-                                        <span className="font-semibold">
-                                            Junio 2022 - Mayo 2024
-                                        </span>
-                                    </p>
-                                    <p className="text-base mb-4">
-                                        Desarrollé y diseñé un módulo web que
-                                        mejoró la generación de documentos para
-                                        la validación de créditos estudiantiles,
-                                        lo que aumentó la eficiencia de la
-                                        coordinación escolar y solucionó
-                                        problemas de gestión documental en la
-                                        Universidad de Guadalajara.
-                                    </p>
+                                    <div className="bg-[#005b8f] dark:bg-[#3d3d3d] text-white p-6 rounded-lg shadow-lg">
+                                        <h3 className="text-2xl font-bold mb-4">
+                                            Aplicación Web - Universidad de
+                                            Guadalajara
+                                        </h3>
+                                        <p className="text-lg mb-2">
+                                            <span className="font-semibold">
+                                                Junio 2022 - Mayo 2024
+                                            </span>
+                                        </p>
+                                        <p className="text-base mb-4">
+                                            Desarrollé y diseñé un módulo web
+                                            que mejoró la generación de
+                                            documentos para la validación de
+                                            créditos estudiantiles, lo que
+                                            aumentó la eficiencia de la
+                                            coordinación escolar y solucionó
+                                            problemas de gestión documental en
+                                            la Universidad de Guadalajara.
+                                        </p>
 
-                                    <div className="border-t border-white/20 pt-4 mt-4">
-                                        <div className="flex flex-wrap gap-2">
-                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
-                                                Python
-                                            </span>
-                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
-                                                Django
-                                            </span>
-                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
-                                                PostgreSQL
-                                            </span>
-                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
-                                                Docker
-                                            </span>
-                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
-                                                Nginx
-                                            </span>
-                                            <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
-                                                Linux
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="text-[#005b8f] dark:text-white text-2xl font-bold mb-4 text-center">
-                                    Habilidades
-                                </h3>
-                                <div className="space-y-4">
-                                    <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
-                                        <h4 className="text-white font-bold text-xl mb-2">
-                                            Lenguajes y frameworks
-                                        </h4>
-                                        <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
-                                            <div className="flex flex-col items-center">
-                                                <PythonIcon className="w-16 h-16 text-white skill-icon" />
-                                                <span className="text-white mt-2 font-medium">
+                                        <div className="border-t border-white/20 pt-4 mt-4">
+                                            <div className="flex flex-wrap gap-2">
+                                                <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                                                     Python
                                                 </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <DjangoIcon className="w-16 h-16 text-white skill-icon" />
-                                                <span className="text-white mt-2 font-medium">
+                                                <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                                                     Django
                                                 </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <FlaskIcon className="w-16 h-16 text-white skill-icon" />
-                                                <span className="text-white mt-2 font-medium">
-                                                    Flask
-                                                </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <SpringIcon className="w-16 h-16 text-white skill-icon" />
-                                                <span className="text-white mt-2 font-medium">
-                                                    Spring
-                                                </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <JavaIcon className="w-16 h-16 text-white skill-icon" />
-                                                <span className="text-white mt-2 font-medium">
-                                                    Java
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
-                                        <h4 className="text-white font-bold text-xl mb-2">
-                                            Bases de datos
-                                        </h4>
-                                        <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
-                                            <div className="flex flex-col items-center">
-                                                <MysqlIcon className="w-12 h-12 text-white skill-icon" />
-                                                <span className="text-white">
-                                                    MySQL
-                                                </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <PostgresIcon className="w-12 h-12 text-white skill-icon" />
-                                                <span className="text-white">
+                                                <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                                                     PostgreSQL
                                                 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
-                                        <h4 className="text-white font-bold text-xl mb-2">
-                                            Otros
-                                        </h4>
-                                        <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
-                                            <div className="flex flex-col items-center">
-                                                <DockerIcon className="w-12 h-12 text-white skill-icon" />
-                                                <span className="text-white">
+                                                <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                                                     Docker
                                                 </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <GithubIcon className="w-12 h-12 text-white skill-icon" />
-                                                <span className="text-white">
-                                                    Git
-                                                </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <NginxIcon className="w-12 h-12 text-white skill-icon" />
-                                                <span className="text-white">
+                                                <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                                                     Nginx
                                                 </span>
-                                            </div>
-                                            <div className="flex flex-col items-center">
-                                                <LinuxIcon className="w-12 h-12 text-white skill-icon" />
-                                                <span className="text-white">
+                                                <span className="px-3 py-1 bg-white/10 rounded-full text-sm hover:bg-white/20 transition-colors">
                                                     Linux
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div>
+                                    <h3 className="text-[#005b8f] dark:text-white text-2xl font-bold mb-4 text-center">
+                                        Habilidades
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
+                                            <h4 className="text-white font-bold text-xl mb-2">
+                                                Lenguajes y frameworks
+                                            </h4>
+                                            <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
+                                                <div className="flex flex-col items-center">
+                                                    <PythonIcon className="w-16 h-16 text-white skill-icon" />
+                                                    <span className="text-white mt-2 font-medium">
+                                                        Python
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <DjangoIcon className="w-16 h-16 text-white skill-icon" />
+                                                    <span className="text-white mt-2 font-medium">
+                                                        Django
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <FlaskIcon className="w-16 h-16 text-white skill-icon" />
+                                                    <span className="text-white mt-2 font-medium">
+                                                        Flask
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <SpringIcon className="w-16 h-16 text-white skill-icon" />
+                                                    <span className="text-white mt-2 font-medium">
+                                                        Spring
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <JavaIcon className="w-16 h-16 text-white skill-icon" />
+                                                    <span className="text-white mt-2 font-medium">
+                                                        Java
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
+                                            <h4 className="text-white font-bold text-xl mb-2">
+                                                Bases de datos
+                                            </h4>
+                                            <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
+                                                <div className="flex flex-col items-center">
+                                                    <MysqlIcon className="w-12 h-12 text-white skill-icon" />
+                                                    <span className="text-white">
+                                                        MySQL
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <PostgresIcon className="w-12 h-12 text-white skill-icon" />
+                                                    <span className="text-white">
+                                                        PostgreSQL
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="bg-[#005b8f] dark:bg-[#3d3d3d] rounded-md p-4">
+                                            <h4 className="text-white font-bold text-xl mb-2">
+                                                Otros
+                                            </h4>
+                                            <div className="flex items-center space-x-4 flex-wrap justify-center gap-6">
+                                                <div className="flex flex-col items-center">
+                                                    <DockerIcon className="w-12 h-12 text-white skill-icon" />
+                                                    <span className="text-white">
+                                                        Docker
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <GithubIcon className="w-12 h-12 text-white skill-icon" />
+                                                    <span className="text-white">
+                                                        Git
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <NginxIcon className="w-12 h-12 text-white skill-icon" />
+                                                    <span className="text-white">
+                                                        Nginx
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col items-center">
+                                                    <LinuxIcon className="w-12 h-12 text-white skill-icon" />
+                                                    <span className="text-white">
+                                                        Linux
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section className="bg-white dark:bg-[#1a1a1a] py-20 px-4 md:px-8">
-                    <div className="container mx-auto">
-                        <h2 className="text-[#005b8f] dark:text-white text-3xl font-bold mb-8 text-center">
-                            Proyectos
-                        </h2>
-                        <div
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-8"
-                            id="projects"
-                        >
-                            {projects.map((project, index) => (
-                                <ProjectCard key={index} project={project} />
-                            ))}
+                    </section>
+
+                    <section
+                        aria-label="Projects"
+                        className="bg-white dark:bg-[#1a1a1a] py-20 px-4 md:px-8"
+                    >
+                        <div className="container mx-auto">
+                            <h2 className="text-[#005b8f] dark:text-white text-3xl font-bold mb-8 text-center">
+                                Proyectos
+                            </h2>
+                            <div
+                                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-8"
+                                id="projects"
+                            >
+                                {projects.map((project, index) => (
+                                    <ProjectCard
+                                        key={index}
+                                        project={project}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </article>
             </main>
 
             {showScrollTop && (
