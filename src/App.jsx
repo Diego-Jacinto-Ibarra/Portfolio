@@ -37,7 +37,15 @@ export default function App() {
             demoUrl: "https://diegojacinto.com/littlelemon/",
             githubUrl: "https://github.com/Diego-Jacinto-Ibarra/Little-Lemon",
         },
-        // ... more projects
+        {
+            title: "Linky",
+            description:
+                "URL shortener website developed as side project to practice Java and Spring Boot.",
+            image: "/linky.png",
+            technologies: ["Java", "Spring Boot", "MySQL", "Nginx"],
+            demoUrl: "https://diegojacinto.com/linky/",
+            githubUrl: "https://github.com/Diego-Jacinto-Ibarra/linky",
+        },
     ];
 
     useEffect(() => {
