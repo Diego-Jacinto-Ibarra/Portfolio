@@ -21,7 +21,7 @@ export default function App() {
         {
             title: "Little Lemon",
             description:
-                "Restaurant management website developed as part of the Meta Back-End Developer Professional Certificate.",
+                "Sitio web de gestión de restaurantes desarrollado como parte del Certificado Profesional de Desarrollo Back-End de Meta.",
             image: "/little.png",
             technologies: ["Python", "Django", "PostgreSQL", "Nginx"],
             demoUrl: "https://diegojacinto.com/littlelemon/",
@@ -30,7 +30,7 @@ export default function App() {
         {
             title: "Linky",
             description:
-                "URL shortener website developed as side project to practice Java and Spring Boot.",
+                "Sitio web acortador de URLs desarrollado como proyecto personal para practicar Java y Spring Boot.",
             image: "/linky.png",
             technologies: ["Java", "Spring Boot", "MySQL", "Nginx"],
             demoUrl: "https://diegojacinto.com/linky/",
@@ -38,13 +38,12 @@ export default function App() {
         },
         {
             title: "BYO-Shell",
-            description:"BYO-shell is a project developed as part of the 'Build Your Own Shell' challenge in CodeCrafters. It represents the learning process of creating a POSIX-compliant shell from scratch.",
-            image:"/shell.png",
-            technologies:["Python"],
-            demoUrl:"https://github.com/Diego-Jacinto-Ibarra/BYO-Shell",
-            githubUrl:"https://github.com/Diego-Jacinto-Ibarra/BYO-Shell"
-        }
-
+            description: "BYO-shell es un proyecto desarrollado como parte del desafío 'Build Your Own Shell' en CodeCrafters. Representa el proceso de aprendizaje para crear una shell compatible con POSIX desde cero.",
+            image: "/shell.png",
+            technologies: ["Python"],
+            demoUrl: "https://github.com/Diego-Jacinto-Ibarra/BYO-Shell",
+            githubUrl: "https://github.com/Diego-Jacinto-Ibarra/BYO-Shell",
+        },
     ];
 
     useEffect(() => {
