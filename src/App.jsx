@@ -22,7 +22,7 @@ export default function App() {
             title: "Little Lemon",
             description:
                 "Restaurant management website developed as part of the Meta Back-End Developer Professional Certificate.",
-            image: "/littlelemon.png",
+            image: "/little.png",
             technologies: ["Python", "Django", "PostgreSQL", "Nginx"],
             demoUrl: "https://diegojacinto.com/littlelemon/",
             githubUrl: "https://github.com/Diego-Jacinto-Ibarra/Little-Lemon",
