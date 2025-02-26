@@ -16,16 +16,6 @@ import { ProjectCard } from "./components/ProjectCard";
 
 export default function App() {
     const [showScrollTop, setShowScrollTop] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-
-    const handleShowModal = () => {
-        event.preventDefault();
-        setShowModal(true);
-    };
-
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
 
     const projects = [
         {
@@ -46,6 +36,15 @@ export default function App() {
             demoUrl: "https://diegojacinto.com/linky/",
             githubUrl: "https://github.com/Diego-Jacinto-Ibarra/linky",
         },
+        {
+            title: "BYO-Shell",
+            description:"BYO-shell is a project developed as part of the 'Build Your Own Shell' challenge in CodeCrafters. It represents the learning process of creating a POSIX-compliant shell from scratch.",
+            image:"/shell.png",
+            technologies:["Python"],
+            demoUrl:"https://github.com/Diego-Jacinto-Ibarra/BYO-Shell",
+            githubUrl:"https://github.com/Diego-Jacinto-Ibarra/BYO-Shell"
+        }
+
     ];
 
     useEffect(() => {
